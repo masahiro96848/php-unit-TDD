@@ -7,6 +7,9 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    public $data;
+
+    
     /**
      * A basic test example.
      *
@@ -14,8 +17,25 @@ class ExampleTest extends TestCase
      */
     public function test_example()
     {
+        // 準備
+        
+        // 実行
         $response = $this->get('/');
 
+        // 検証
         $response->assertStatus(200);
+
+    }
+
+    public function test_example2()
+    {
+        // 準備
+        
+        // 実行
+        $response = $this->get('/');
+
+        // 検証
+        $response->assertStatus(200);
+
     }
 }
