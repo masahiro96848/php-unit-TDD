@@ -9,6 +9,7 @@
         <li>
             {{ $blog->title }}
             {{ $blog->user->name }}
+            ({{ $blog->comments->count()}}件のコメント)
         </li>
     @endforeach
 </ul>
