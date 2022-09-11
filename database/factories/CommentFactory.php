@@ -2,11 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
 use App\Models\Blog;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class BlogFactory extends Factory
+class CommentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,9 +15,9 @@ class BlogFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::factory(),
-            'title' => $this->faker->realText(20),
-            'body' => $this->faker->realText(100),
+            'blog_id' => Blog::factory(),
+            'name' => $this->faker->name,
+            'body' => $this->faker->realText(20),
         ];
     }
 }
